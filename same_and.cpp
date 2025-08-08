@@ -4,21 +4,21 @@ using namespace std;
 typedef long long int ll;
 
 int main() {
-  int t, n, m, m2;
-	vector<vector<int>> sols;
-	vector<int> seq;
+    ll t, n, m, m2;
+	vector<vector<ll>> sols;
+	vector<ll> seq;
 	
 	cin >> t;
-	for (int i = 0; i < t; i++){
+	for (ll i = 0; i < t; i++){
 	    cin >> n >> m;
 	    m2 = m;
-	    int bits = 0;
+	    ll bits = 0;
 	    while (m2 > 0){
 	        m2 >>= 1;
 	        bits++;
 	    };
 	    bits -= 1;
-	    ll comp = 1 << bits;
+	    ll comp = 1ll << bits;
 	    seq = {n};
 	    while (comp > 0){
 	        if ((comp & n) == 0){
